@@ -10,7 +10,7 @@ driver = webdriver.Chrome()
 
 # Função para realizar login
 def login(driver):
-    driver.get('http://173.212.231.29:4002')
+    driver.get('http://10.0.1.240:4000')
     driver.maximize_window()
     
     usuario = WebDriverWait(driver, 20).until(
@@ -47,7 +47,7 @@ def criar_nova_empresa(driver):
     )
     uf.click()
     uf_option = WebDriverWait(driver, 40).until(
-        EC.presence_of_element_located((By.CSS_SELECTOR, 'div.p-dropdown-items-wrapper.ng-tns-c64-43 > ul > p-dropdownitem:nth-child(24) > li'))
+        EC.presence_of_element_located((By.CSS_SELECTOR, 'div.p-dropdown-items-wrapper.ng-tns-c64-43 > ul > p-dropdownitem:nth-child(1) > li'))
     )
     uf_option.click()
 

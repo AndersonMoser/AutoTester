@@ -9,7 +9,7 @@ import time
 driver = webdriver.Chrome()
 
 # Abrir o navegador e acessar a página
-driver.get('http://10.0.2.193:4000')
+driver.get('http://10.0.1.240:4000')
 driver.maximize_window()
 
 # Identificar os campos de login
@@ -20,9 +20,9 @@ senha = driver.find_element(By.CSS_SELECTOR, 'input[formcontrolname="password"]'
 
 # Realizar login
 usuario.clear()
-usuario.send_keys('05573761900')
+usuario.send_keys('20237527000141')
 senha.clear()
-senha.send_keys('791536aA')
+senha.send_keys('20237527000141')
 senha.send_keys(Keys.ENTER)
 
 # Aguardar até que o menu de cadastros esteja presente
@@ -36,8 +36,9 @@ submenuusuario = WebDriverWait(driver, 60).until(
     EC.element_to_be_clickable((By.CSS_SELECTOR, 'a[href="#/registration/users"]'))
 )
 submenuusuario.click()
+time.sleep(5)
 
-# Tentar localizar e clicar no botão "Novo" usando o texto do botão
+# Clicar no botão "Novo" usando o texto do botão
 novousuario = WebDriverWait(driver, 60).until(
     EC.element_to_be_clickable((By.XPATH, '//span[text()="Novo"]'))
 )
@@ -60,6 +61,17 @@ classeusuario_option = WebDriverWait(driver, 60).until(
     EC.presence_of_element_located((By.CSS_SELECTOR, '#pr_id_6_list > li:nth-child(1)'))
 )
 classeusuario_option.click()
+
+# Selecionar marcador
+marcador = WebDriverWait(driver, 60).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, 'div:nth-child(3) > div:nth-child(8) > div.p-formgroup-inline > div.p-col-10.p-col-nogutter > app-auto-complete > p-autocomplete > span > button'))
+        )
+marcador.click()
+
+marcador_option = WebDriverWait(driver, 60).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, '#pr_id_7_list > li:nth-child(1)'))
+        )
+marcador_option.click()
 
 # Selecionar tipo de chave
 tipodechave = WebDriverWait(driver, 60).until(
