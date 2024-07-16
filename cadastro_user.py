@@ -92,6 +92,6 @@ caminho_do_arquivo = r'C:\Users\anderson.moser\Pictures\imagens rosto\FACIAS SIA
 # Enviar o caminho do arquivo para o input do tipo file
 anexarimagem.send_keys(caminho_do_arquivo)
 
-# Adicione qualquer ação adicional necessária aqui, como salvar o formulário
+# Adicione qualquer ação adicional necessária aqui, como salvar o formulário teste commit
 
 
