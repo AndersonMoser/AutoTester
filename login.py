@@ -19,11 +19,9 @@ usuario = WebDriverWait(driver, 10).until(
 senha = driver.find_element(By.CSS_SELECTOR, 'input[formcontrolname="password"]')
 
 # Realizar login
-usuario.clear()
+
 usuario.send_keys('05573761900')
-senha.clear()
+
 senha.send_keys('791536aA')
 senha.send_keys(Keys.ENTER)
 
-# Aguarde alguns segundos antes de fechar o navegador (opcional)
-time.sleep(5)
