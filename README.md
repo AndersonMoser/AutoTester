@@ -8,4 +8,3 @@ Requisitos
 Python 3.x
 Selenium
 WebDriver do navegador desejado (ex.: chromedriver para Google Chrome)
-VsCode
