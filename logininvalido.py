@@ -9,7 +9,7 @@ import time
 driver = webdriver.Chrome()
 
 # Navegar para a página de login
-driver.get('http://10.0.2.193:4000')
+driver.get('http://10.0.1.240:4000')
 driver.maximize_window()
 
 # Localizar os campos de entrada

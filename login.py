@@ -9,7 +9,7 @@ import time
 driver = webdriver.Chrome()
 
 # Abrir o navegador e acessar a página
-driver.get('http://10.0.2.193:4000')
+driver.get('http://10.0.1.240:4000')
 driver.maximize_window()
 
 # Identificar os campos de login
@@ -20,8 +20,8 @@ senha = driver.find_element(By.CSS_SELECTOR, 'input[formcontrolname="password"]'
 
 # Realizar login
 
-usuario.send_keys('05573761900')
+usuario.send_keys('09405185000199')
 
-senha.send_keys('791536aA')
+senha.send_keys('siam')
 senha.send_keys(Keys.ENTER)
 
